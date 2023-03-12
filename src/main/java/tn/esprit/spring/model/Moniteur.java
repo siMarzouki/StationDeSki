@@ -23,6 +23,6 @@ public class Moniteur implements Serializable {
     private String prenomM;
     @Temporal(TemporalType.DATE)
     private Date dateRecru;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany
     private Set<Cours> cours;
 }

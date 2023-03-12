@@ -8,6 +8,6 @@ import tn.esprit.spring.model.Piste;
 @Repository
 
 public interface PisteRepository extends JpaRepository<Piste, Long> {
-    @Query("select Cours from  Cours,Inscription ,Skieur ,Piste " +
-            "where Cours.inscriptions i " )
+//    @Query("select Cours from  Cours,Inscription ,Skieur ,Piste " +
+//            "where Cours.inscriptions i " )
 }

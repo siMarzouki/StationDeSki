@@ -3,8 +3,6 @@ package tn.esprit.spring.model;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -30,10 +28,8 @@ public class Abonnement implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dateFin;
     private float prixAbon;
-    @Enumerated()
+    @Enumerated(EnumType.STRING)
     private TypeAbonnement typeAbon;
-    @OneToOne(cascade = CascadeType.REMOVE, mappedBy = "abonnement")
-    private Skieur skieur;
 
 
 }

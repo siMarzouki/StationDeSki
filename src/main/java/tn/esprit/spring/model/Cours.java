@@ -23,14 +23,17 @@ enum TypeCours{
 public class Cours implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long numCours;
+    private long numCours;
+
     private int niveau;
-    @Enumerated()
-    private TypeCours typeCours;
-    @Enumerated()
-    private  Support support;
+
     private float prix;
     private int creneau;
+    @Enumerated(EnumType.STRING)
+    private TypeCours typeCours;
+    @Enumerated(EnumType.ORDINAL)
+
+    private Support support;
     @OneToMany(mappedBy = "cours")
     private Set<Inscription> inscriptions;
 

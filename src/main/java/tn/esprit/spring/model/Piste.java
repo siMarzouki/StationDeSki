@@ -31,7 +31,7 @@ public class Piste implements Serializable {
     private int longeur;
     private int pente;
 
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "pistes")
+    @ManyToMany( mappedBy = "pistes")
     private Set<Skieur> skieurs;
 
 

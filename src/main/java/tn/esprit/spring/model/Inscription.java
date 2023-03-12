@@ -19,10 +19,10 @@ public class Inscription implements Serializable {
     private Long numInscription;
     private int numSemaine;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Skieur skieur;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Cours cours;
 
 }
